@@ -2,10 +2,10 @@ import React from 'react';
 import '../homeCom/HeroSection.css';
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
 import { Container, Row, Col } from 'react-bootstrap';
-import Home2 from '../../assets/images/Home-2.jpg';
-import Home3 from '../../assets/images/Home-3.jpg';
-import BIM from '../../assets/images/BIM.png';
-import HeroImg from '../../assets/images/Hero.png'; // Your actual image
+import Home2 from '../../assets/Images/Home-2.jpg';
+import Home3 from '../../assets/Images/Home-3.jpg';
+import BIM from '../../assets/Images/BIM.png';
+import HeroImg from '../../assets/Images/Hero.png'; // Your actual image
 
 const HeroSection = () => {
   return (
