@@ -1,0 +1,63 @@
+.training-areas-container {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.training-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #272361;
+  font-weight: 700;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.training-card {
+  background: linear-gradient(180deg, #4655a5, #0dbcd4);
+  padding: 1.8rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 260px;
+}
+
+.training-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(70, 85, 165, 0.4);
+}
+
+.training-icon {
+  color: white;
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.training-card p {
+  font-size: 1.15rem;
+  color: white;
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+@media screen and (min-width: 600px) {
+  .training-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .training-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

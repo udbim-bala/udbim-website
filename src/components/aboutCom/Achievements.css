@@ -1,0 +1,61 @@
+.achievements-section {
+  background-color: #fff;
+  color: #272361;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.achievements-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  position: relative;
+  color: #272361;
+}
+
+.achievements-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #4655a5, #0dbcd4);
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+.achievement-card {
+  background: #272361;
+  border-radius: 12px;
+  height: 6rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+  color: #fff;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(70, 85, 165, 0.3);
+}
+
+.check-icon {
+  color: #fff;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.achievement-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  user-select: none;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .achievements-title {
+    font-size: 2rem;
+  }
+
+  .achievement-text {
+    font-size: 1rem;
+  }
+}

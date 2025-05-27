@@ -1,0 +1,178 @@
+.academy-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.academy-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+.academy-left {
+    flex: 1 1 500px;
+    position: relative;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    position: relative;
+}
+
+.img-large {
+    grid-column: span 2;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 80px 5px 5px 5px;
+}
+
+.img-small-1,
+.img-small-2 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.img-small-1 {
+    border-radius: 5px 5px 5px 80px;
+}
+
+.img-small-2 {
+    border-radius: 5px 5px 80px 5px;
+}
+
+.experience-circle {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(45deg, #4655a5, #0dbcd4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience-circle h3 {
+    margin: 5px 0 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.experience-circle p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.academy-right {
+    flex: 1 1 400px;
+}
+
+.about-us {
+    color: #4655a5;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bulletinIcon {
+    color: #4655a5;
+    font-size: 28px;
+}
+
+.academy-right .no1 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-item h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.read-more-btn {
+    padding: 12px 24px;
+    color: #4655a5;
+    border: 1px solid #4655a5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: linear-gradient(45deg, #4655a5, #0dbcd4);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .academy-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .experience-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .experience-circle h3 {
+        font-size: 24px;
+    }
+
+    .experience-circle p {
+        font-size: 12px;
+    }
+
+    .academy-right .about-us,
+    .no1,
+    .description {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .features h4 {
+        text-align: center;
+    }
+
+    .features ul {
+        align-self: center;
+    }
+
+    .read-more-btn {
+        display: block;
+        margin: 20px auto 0;
+    }
+}

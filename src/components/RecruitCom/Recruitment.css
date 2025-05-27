@@ -1,0 +1,88 @@
+
+/* Shared Styles */
+.recruit-section {
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.recruit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.recruit-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.recruit-heading:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.recruit-subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+  color: var(--secondary);
+}
+
+.recruit-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray);
+}
+
+/* Hero Section */
+.recruit-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.recruit-hero .recruit-container {
+  animation: fadeInUp 1s ease;
+}
+
+.recruit-hero .recruit-heading {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.recruit-hero .recruit-heading:after {
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+}
+
+.recruit-hero .recruit-subheading {
+  color: white;
+  font-size: 1.8rem;  
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.recruit-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}

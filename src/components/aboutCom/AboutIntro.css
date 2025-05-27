@@ -1,0 +1,91 @@
+.about-intro {
+  position: relative;
+  background-image: url('../../assets/Images/Rebar_Training.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.about-intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 80%;
+  z-index: 1;
+}
+
+.about-intro-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-intro-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #0dbcd4;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.about-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.about-intro-tagline {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.about-intro-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: white;
+  text-align: justify;
+}
+
+.about-intro-text p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    padding: 60px 15px;
+  }
+
+  .about-intro h1 {
+    font-size: 2rem;
+  }
+
+  .about-intro-tagline {
+    font-size: 1rem;
+  }
+
+  .about-intro-text {
+    font-size: 0.95rem;
+  }
+
+  .about-intro-icon {
+    font-size: 40px;
+  }
+}

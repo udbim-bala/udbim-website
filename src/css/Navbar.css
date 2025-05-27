@@ -1,0 +1,138 @@
+/* Navbar container */
+.navbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.navbar-logo img {
+  width: 300px;
+  height: auto;
+  display: block;
+}
+
+/* Menu box */
+.navbar-menu-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  box-shadow: 
+    0 0 6px 1px rgba(70, 85, 165, 0.6),
+    0 0 10px 2px rgba(13, 188, 212, 0.6);
+
+}
+
+/* Navbar links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 5px;
+}
+
+/* Link styles */
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-links li a:hover {
+  color: #0dbcd4;
+}
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* Desktop buttons */
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Button styles */
+.navbar-buttons button,
+.navbar-buttons-mobile button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #4655a5;
+  border-radius: 4px;
+  color: #4655a5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navbar-buttons button:hover,
+.navbar-buttons-mobile button:hover {
+  background: linear-gradient(45deg, #4655a5, #0dbcd4);
+  color: #fff;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Mobile buttons */
+.navbar-buttons-mobile {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-menu-box {
+    box-shadow: none;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 250px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: max-height 0.3s ease;
+    z-index: 99;
+    display: none;
+  }
+  .navbar-links.active {
+    max-height: 500px;
+    display: flex;
+  }
+  .navbar-buttons {
+    display: none;
+  }
+  .navbar-buttons-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
