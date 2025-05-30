@@ -53,7 +53,7 @@ const Footer = () => {
               <div className="footer-about text-md-start text-center">
                 <img src={Logo} alt="UD-BIM Logo" className="footer-logo mb-2" />
                 <p className="footer-text">
-                  At UD-BIM Training Institute, it's never too late to learn. We provide quality education in Building Information Modeling (BIM) for both beginners and professionals.
+                  At UD- BIM Training Institute, it's never too late to learn or change your field. Whether you're starting fresh or upgrading your skills, we empower every learner with hands-on training in Rebar Detailing, BIM, and structural Detailing. Unlock new career opportunities, your future in Digital engineering starts here!
                 </p>
               </div>
             </Col>

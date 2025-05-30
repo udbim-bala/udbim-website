@@ -52,7 +52,7 @@ const HeroSection = () => {
               <h3 className="about-us">Why Universal Detailing and BIM Training Institute?</h3>
               <p className="no1">#1 Detailing & BIM Training Institute</p>
               <p className="description">
-                At Universal Detailing Training Institute, we provide career-focused training
+                At Universal Detailing & BIM Training Institute, we provide career-focused training
                 in Rebar Detailing, Structural Detailing, Estimation, MEP & BIM. Whether you're
                 a fresher or working professional, our programs are designed to make you job-ready
                 with real-world skills.

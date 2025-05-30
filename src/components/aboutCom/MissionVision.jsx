@@ -22,7 +22,7 @@ const MissionVision = () => {
             <div className="mv-text">
               <h3>Our Vision</h3>
               <p>
-                To become the #1 Detailing & BIM Training Training Institute in India and worldwide, known for quality education, career advancement, and 100% job readiness.
+                To become the #1 Detailing & BIM Training Institute in India and worldwide, known for quality education, career advancement, and 100% job readiness.
               </p>
             </div>
           </div>
