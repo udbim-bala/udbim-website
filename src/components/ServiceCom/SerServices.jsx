@@ -3,34 +3,38 @@ import { FaDrawPolygon, FaCube, FaCalculator, FaBuilding } from 'react-icons/fa'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './SerServices.css';
+import Service1 from '../../assets/Images/Service1.jpg'
+import Service2 from '../../assets/Images/Service2.jpg'
+import Service3 from '../../assets/Images/Service3.jpg'
+import Service4 from '../../assets/Images/Service4.jpg'
 
 const services = [
   {
     icon: <FaDrawPolygon />,
     title: '2D Rebar Detailing',
     description: 'Precise 2D rebar detailing and shop drawings for all concrete structures with compliance to international standards.',
-    image: 'https://images.unsplash.com/photo-1593692716621-1e228b0a9224?w=600&auto=format&fit=crop&q=60',
+    image: Service1,
     color: '#2a7fba',
   },
   {
     icon: <FaCube />,
     title: '3D Rebar Modeling (BIM)',
     description: 'Intelligent 3D BIM models for clash-free construction planning and visualization.',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1171&q=80',
+    image: Service2,
     color: '#e74c3c',
   },
   {
     icon: <FaCalculator />,
     title: 'Rebar Estimation',
     description: 'Accurate quantity takeoffs and material planning to optimize your project budget.',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1170&q=80',
+    image: Service3,
     color: '#27ae60',
   },
   {
     icon: <FaBuilding />,
     title: 'Structural Steel Detailing',
     description: 'Fabrication-ready 3D steel models and shop drawings for seamless construction.',
-    image: 'https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=1170&q=80',
+    image: Service4,
     color: '#f39c12',
   }
 ];

@@ -17,7 +17,7 @@ const AboutIntro = () => {
             Universal Detailing and BIM Training Institute is a leading training institute specializing in Rebar Detailing, BIM Modeling, Structural Drafting, Structural Steel Detailing, Precast Detailing, MEP Ducting Detailing, Rebar Estimation and Bar Bending Schedule (BBS) training. We are dedicated to transforming civil engineering graduates, draftsmen, and construction professionals into skilled experts who are job-ready and industry-certified.
           </p>
           <p>
-            With a vision to bridge the gap between academic learning and industry requirements, we have successfully trained over 40+ students and professionals across India and abroad.
+            With a vision to bridge the gap between academic learning and industry requirements.
           </p>
         </div>
       </div>

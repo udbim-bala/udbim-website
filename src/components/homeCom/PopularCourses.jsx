@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './PopularCourses.css';
-import TwoDRebar from '../../assets/Images/2D_Rebar_1.jpg'
-import ThreeDRebar from '../../assets/Images/3D_rebar_2.jpg'
-import Steel_Detailing from '../../assets/Images/Steel_Detailing.jpg'
-import Estimation from '../../assets/Images/Estimation.jpg'
+import TwoDRebar from '../../assets/Images/Popular1.jpg'
+import ThreeDRebar from '../../assets/Images/Popular2.jpg'
+import Steel_Detailing from '../../assets/Images/Popular3.jpg'
+import Estimation from '../../assets/Images/Popular4.png'
 
 const coursesData = [
   {

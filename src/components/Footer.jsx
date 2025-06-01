@@ -87,7 +87,7 @@ const Footer = () => {
                   <span className="contact-icon me-2 mt-1"><FaPhoneAlt /></span>
                   <div>
                     <a href="tel:+918122149339" className="footer-link contact-link">+91 81221 49339</a>
-                    <div className="contact-hours small">Mon-Sat, 9AM-6PM</div>
+                    <div className="contact-hours small">Mon-Sun, 9AM-6PM</div>
                   </div>
                 </li>
                 <li className="d-flex justify-content-center justify-content-md-start mb-2">

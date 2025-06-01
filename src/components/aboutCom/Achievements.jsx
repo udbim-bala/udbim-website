@@ -6,7 +6,7 @@ import '../aboutCom/Achievements.css';
 const achievementsData = [
   "Trained 40+ Students & Professionals",
   "Strong Placement Track Record",
-  "Detailing & BIM one of the Top Detailing Training Institutes in India",
+  "One of top detailing & BIM training institute in India and globe",
 ];
 
 const Achievements = () => {

@@ -1,7 +1,20 @@
-import TwoD from '../assets/Images/2D_Rebar.jpg'
-import ThreeD from '../assets/Images/3D_rebar.jpg'
-import Estimation from '../assets/Images/Estimation.jpg'
-import Structural_Detailing from '../assets/Images/Structural_Detailing.jpg'
+import TwoD from '../assets/Images/Course1.jpg'
+import ThreeD from '../assets/Images/Course2.jpg'
+import Structural_Detailing from '../assets/Images/Course3.jpg'
+import Estimation from '../assets/Images/Course4.png'
+
+// import Package1 from '../assets/Images/Course4.jpg'
+// import Package2 from '../assets/Images/Course4.jpg'
+
+import CS1 from '../assets/Images/CS1.jpg'
+import CS2 from '../assets/Images/CS2.jpg'
+import CS3 from '../assets/Images/CS3.JPG'
+import CS4 from '../assets/Images/CS4.jpg'
+import CS5 from '../assets/Images/CS5.jpg'
+import CS6 from '../assets/Images/CS6.jpg'
+
+
+
 
 export const programs = [
   {
@@ -98,7 +111,7 @@ export const programs = [
     id: 7,
     title: "MEP – BIM",
     category: "upcoming courses",
-    image: "/images/mep-bim.jpg",
+    image: CS1,
     shortDesc: "Learn to model, coordinate, and document MEP systems using BIM software.",
     longDesc: "coming soon",
     price: "₹25,000 – ₹40,000 + 18% GST (Customizable)",
@@ -118,7 +131,7 @@ export const programs = [
     id: 8,
     title: "Precast Detailing",
     category: "upcoming courses",
-    image: "/images/precast-bim.jpg",
+    image:CS2,
     shortDesc: "Specialize in precast concrete modeling and detailing using BIM tools.",
     longDesc: "Designed for structural engineers and BIM professionals to model and detail precast concrete components using Tekla Structures or Revit.",
     price: "₹25,000 – ₹40,000 + 18% GST (Customizable)",
@@ -138,7 +151,7 @@ export const programs = [
     id: 9,
     title: "Ducting Detailing",
     category: "upcoming courses",
-    image: "/images/ducting-detailing.jpg",
+    image:CS3,
     shortDesc: "Learn fundamentals of ducting layout, design, and detailing for HVAC systems.",
     longDesc: "Focus on HVAC duct system layout, shop drawings, duct sizing, routing, airflow, insulation, and coordination.",
     price: "₹15,000 – ₹25,000 + 18% GST",
@@ -158,7 +171,7 @@ export const programs = [
     id: 10,
     title: "Structural Design",
     category: "upcoming courses",
-    image: "/images/structural-design.jpg",
+    image: CS4,
     shortDesc: "Comprehensive intro to structural design fundamentals for aspiring engineers and architects.",
     longDesc: "Covers material properties, load analysis, safety standards with theory and practical exercises. No prior experience required.",
     price: "₹10,000 (Approx.)",
@@ -177,7 +190,7 @@ export const programs = [
     id: 11,
     title: "Detailing Top Software Training",
     category: "upcoming courses",
-    image: "/images/detailing-software.jpg",
+    image: CS5,
     shortDesc: "Master top detailing software tools used in the construction and manufacturing industries.",
     longDesc: "Hands-on training in leading detailing software like AutoCAD, Revit, Tekla, and SolidWorks.",
     price: "₹12,500 (Approx.)",
@@ -196,7 +209,7 @@ export const programs = [
     id: 12,
     title: "Steel - SDS2 Training",
     category: "upcoming courses",
-    image: "/images/sds2-training.jpg",
+    image: CS6,
     shortDesc: "Specialized training in SDS2 for steel detailing professionals and structural engineers.",
     longDesc: "Covers the entire workflow of steel detailing using SDS2, including connection design, 3D modeling, and fabrication drawings.",
     price: "₹14,000 (Approx.)",
