@@ -11,10 +11,10 @@ const RecruitPricing = () => {
   const WHATSAPP_NUMBER = "918122149339"; // Replace with your actual number
 
   const whatsappLinks = {
-    requestCandidates: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello, I'm interested in hiring candidates. Please assist me.")}`,
-    getStarted: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I'm looking to start a service as a candidate. Guide me please.")}`,
+    requestCandidates: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello, I'm interested in hiring candidates. Can you assist me?")}`,
+    getStarted: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I'm looking for a career opportunity as a candidate. Can you guide me?")}`,
     hireTalent: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello, I want to hire talent for my company.")}`,
-    getHired: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I'm looking for a job opportunity. Please help me get started.")}`,
+    getHired: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I'm looking for a job opportunity. Can you help me to get started.")}`,
   };
 
   const employerPlans = [
