@@ -21,9 +21,28 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* New Job Items Grid Styles */
+.jobs-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.job-items-container {
+  display: inline-flex;
+  gap: 15px;
+  min-width: 100%;
+}
+
 .job-item {
-  color: #272361;
-  font-weight: 600;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
 }
 
 .job-icon {
@@ -32,6 +51,15 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.job-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #272361;
+  margin: 0;
+  text-align: center;
+}
+
+/* Existing Offer Steps Styles */
 .offer-steps {
   display: flex;
   flex-wrap: wrap;
@@ -73,8 +101,8 @@ body {
     flex-direction: column;
     text-align: left;
   }
-
-  .job-grid {
-    text-align: center;
+  
+  .job-item {
+    min-width: 140px;
   }
 }

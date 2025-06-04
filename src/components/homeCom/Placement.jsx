@@ -6,7 +6,9 @@ import {
   FaFileAlt,
   FaUserTie,
   FaComments,
-  FaPaperPlane
+  FaPaperPlane,
+  FaBuilding,
+  FaCalculator
 } from 'react-icons/fa';
 import '../homeCom/Placement.css';
 
@@ -17,26 +19,36 @@ const Placement = () => {
         <h2 className="section-title text-center">Placement and Career Support</h2>
 
         <p className="placement-subheading text-center">Our Graduates Land Jobs As</p>
-        <Row className="job-grid text-center mb-0 pb-0">
-          <Col xs={6} md={3} className="job-item">
-            <FaDraftingCompass className="job-icon" />
-            <p className='job-name'>Rebar Detailers</p>
-          </Col>
-          <Col xs={6} md={3} className="job-item">
-            <FaProjectDiagram className="job-icon" />
-            <p className='job-name'>BIM Modelers</p>
-          </Col>
-          <Col xs={6} md={3} className="job-item">
-            <FaFileAlt className="job-icon" />
-            <p className='job-name'>Bar Bending Engineers</p>
-          </Col>
-          <Col xs={6} md={3} className="job-item">
-            <FaUserTie className="job-icon" />
-            <p className='job-name'>Structural Drafters</p>
-          </Col>
-        </Row>
-
         
+        <div className="jobs-scroll-wrapper">
+          <div className="job-items-container">
+            <div className="job-item">
+              <FaDraftingCompass className="job-icon" />
+              <p className='job-name'>Rebar Detailers</p>
+            </div>
+            <div className="job-item">
+              <FaProjectDiagram className="job-icon" />
+              <p className='job-name'>BIM Modelers</p>
+            </div>
+            <div className="job-item">
+              <FaFileAlt className="job-icon" />
+              <p className='job-name'>Bar Bending Engineers</p>
+            </div>
+            <div className="job-item">
+              <FaUserTie className="job-icon" />
+              <p className='job-name'>Structural Drafters</p>
+            </div>
+            <div className="job-item">
+              <FaCalculator className="job-icon" />
+              <p className='job-name'>Rebar Estimator</p>
+            </div>
+            <div className="job-item">
+              <FaBuilding className="job-icon" />
+              <p className='job-name'>Structural Steel Modeler</p>
+            </div>
+          </div>
+        </div>
+
         <Row className="offer-steps mt-0">
           <p className="placement-subheading text-center mt-5">We Offer</p>
           <Col md={6} className="offer-card">

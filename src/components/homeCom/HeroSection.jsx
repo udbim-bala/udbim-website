@@ -21,7 +21,7 @@ const HeroSection = () => {
               Start your journey with <strong>UD-BIM Training Institute</strong>, a premier training hub in Chennai. Dive into <strong>Practical Certified Courses in Digital Engineering</strong>. Your path to professional success starts here.
               In Live - <strong>Online</strong> and <strong>Offline</strong> mode Training
             </p>
-            <button className="read-more-btn">Read More</button>
+            <button className="read-more-btn">Explore Now</button>
           </Col>
           <Col md={6}>
             <img src={HeroImg} alt="Digital Engineering" className="img-fluid hero-image" />

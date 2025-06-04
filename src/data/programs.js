@@ -13,6 +13,9 @@ import CS4 from '../assets/Images/CS4.jpg'
 import CS5 from '../assets/Images/CS5.jpg'
 import CS6 from '../assets/Images/CS6.jpg'
 
+import PK1 from "../assets/Images/package1.avif"
+import PK2 from "../assets/Images/package2.avif"
+
 
 
 
@@ -188,7 +191,7 @@ export const programs = [
   },
   {
     id: 11,
-    title: "Detailing Top Software Training",
+    title: "Top Software Training - Detailing & Drafting",
     category: "upcoming courses",
     image: CS5,
     shortDesc: "Master top detailing software tools used in the construction and manufacturing industries.",
@@ -228,7 +231,7 @@ export const programs = [
   id: 5,
   title: "Detailing Office Package",
   category: "packages",
-  image: "/images/detailing-office.jpg", // You may want to update this image path
+  image: PK1, // You may want to update this image path
   shortDesc: "Specialized training program for freshers in engineering firms with customized country code packages.",
   longDesc: "Our Detailing Office Package is a specially curated training program designed for individuals and teams for freshers in engineering firms. Offers customized packages based on selective Rebar Detailing Country Codes (like ACI, RSIC, BS, SABS, EC2 & IS Code). Ideal for onboarding new team members and enhancing efficiency in real projects.",
   price: "Contact for quote",
@@ -247,7 +250,7 @@ export const programs = [
   id: 6,
   title: "College Bulk Package",
   category: "packages",
-  image: "/images/college-bulk.jpg", // You may want to update this image path
+  image: PK2, // You may want to update this image path
   shortDesc: "Industry-oriented training for civil engineering students to bridge classroom learning and real-world practices.",
   longDesc: "Our College Package is designed specifically for civil engineering students and academic institutions aiming to bridge the gap between classroom learning and real-world construction practices. This industry-oriented training introduces students to the essentials of rebar detailing, enabling them to become job-ready before graduation.",
   price: "Contact for quote",

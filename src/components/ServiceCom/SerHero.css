@@ -1,6 +1,6 @@
 .ser-hero {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+  background: url("../../assets/Images/Rebar_Training.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@
 }
 
 .ser-hero-glass h1 {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   margin-bottom: 1rem;
 }
 

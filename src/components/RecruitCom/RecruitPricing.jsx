@@ -93,10 +93,10 @@ const RecruitPricing = () => {
                 For Candidates
               </button>
             </div>
-            <div className="tab-note">
+            {/* <div className="tab-note">
               <IoBusinessSharp />
               <span>Alternative Option: 6%–10% of annual CTC (industry standard for niche recruitment)</span>
-            </div>
+            </div> */}
           </div>
 
           {activeTab === 'employers' && (
@@ -107,7 +107,7 @@ const RecruitPricing = () => {
                     <div className="card-header">
                       <div className="plan-icon">{plan.icon}</div>
                       <h3>{plan.level}</h3>
-                      <div className="plan-price">{plan.fee}</div>
+                      {/* <div className="plan-price">{plan.fee}</div> */}
                     </div>
                     <ul className="plan-features">
                       {plan.features.map((feature, i) => (
@@ -139,9 +139,9 @@ const RecruitPricing = () => {
               <div className="service-cards">
                 {candidateServices.map((service, index) => (
                   <div className="service-card" key={index}>
-                    <div className="service-icon">{service.icon}</div>
+                    <div className="service-icon mt-0">{service.icon}</div>
                     <h3>{service.service}</h3>
-                    <div className="service-price">{service.price}</div>
+                    {/* <div className="service-price">{service.price}</div> */}
                     <ul className="service-features">
                       {service.features.map((feature, i) => (
                         <li key={i}>

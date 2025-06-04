@@ -10,7 +10,7 @@ const Services = () => {
     <div>
       <SerHero/>
       <SerServices/>
-      <SerWhyChoose/>
+      {/* <SerWhyChoose/> */}
       <SerContact/>
     </div>
   )

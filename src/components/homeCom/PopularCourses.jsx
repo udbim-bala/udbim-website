@@ -15,7 +15,7 @@ const coursesData = [
       "Master rebar placement drawings and Bar Bending Schedule (BBS).",
       "Taught using top-rated software"
     ],
-    link: "/courses/rebar-2d"
+    link: "/programs"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const coursesData = [
       "3D BIM workflows, clash detection, and parametric modeling.",
       "Industry-relevant tools included"
     ],
-    link: "/courses/rebar-3d-bim"
+    link: "/programs"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const coursesData = [
       "Covering RCC detailing, IS/ACI standards, and QC checks.",
       "Includes real-world projects"
     ],
-    link: "/courses/structural-detailing"
+    link: "/programs"
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const coursesData = [
       "Custom programs for firms & academic institutions.",
       "Includes certification & LMS support"
     ],
-    link: "/courses/bulk-training"
+    link: "/programs"
   }
 ];
 
