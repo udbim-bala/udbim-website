@@ -60,10 +60,7 @@ const RecruitServices = () => {
       </div>
 
       <div className="services-container">
-        <div className="services-intro">
-          <h2>Our Recruitment Services</h2>
-          <p>We provide specialized talent solutions tailored for the Detailing & BIM industry.</p>
-        </div>
+  
 
         <div className="services-grid">
           {services.map((service, index) => (
