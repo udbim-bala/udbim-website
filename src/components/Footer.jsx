@@ -61,7 +61,7 @@ const Footer = () => {
             <Col lg={2} md={6} sm={12} className="mb-4 text-md-start text-center">
               <h5 className="footer-heading">Quick Links</h5>
               <ul className="footer-links list-unstyled">
-                {['Home', 'About Us', 'Services', 'Recruiters', 'Contact'].map((item, index) => (
+                {['Home', 'About Us', 'Services', 'Hiring Solutions', 'Contact'].map((item, index) => (
                   <li key={index}>
                     <a href="#" className="footer-link">{item}</a>
                   </li>

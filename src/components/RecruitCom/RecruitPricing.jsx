@@ -27,7 +27,7 @@ const RecruitPricing = () => {
     },
     {
       icon: <FaUserTie size={24} />,
-      level: "Junior Level (1–3 years)",
+      level: "Jr Level (1–3 years)",
       fee: "₹20,000 – ₹30,000",
       features: ["Project experience", "Moderate technical skills", "Team collaboration ready"],
       highlight: "Based on specialization"

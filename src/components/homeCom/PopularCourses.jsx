@@ -12,8 +12,7 @@ const coursesData = [
     title: "2D Rebar Detailing - Professional Course",
     image:TwoDRebar,
     description: [
-      "Master rebar placement drawings and Bar Bending Schedule (BBS).",
-      "Taught using top-rated software"
+      "Master the fundamentals of 2D rebar detailing, This course is designed to train professionals in preparing accurate reinforcement placing drawings, and producing bar bending schedules as per global standards"
     ],
     link: "/programs"
   },
@@ -22,8 +21,7 @@ const coursesData = [
     title: "3D Rebar Detailing - BIM Course",
     image: ThreeDRebar,
     description: [
-      "3D BIM workflows, clash detection, and parametric modeling.",
-      "Industry-relevant tools included"
+      "Learn how to model, manage, and visualize reinforcement using Revit in 3D. This course equips rebar detailers with hands-on BIM skills aligned with global standards, improving accuracy, coordination, and construction efficiency."
     ],
     link: "/programs"
   },
@@ -32,8 +30,7 @@ const coursesData = [
     title: "Steel Detailing - BIM Course",
     image: Steel_Detailing,
     description: [
-      "Covering RCC detailing, IS/ACI standards, and QC checks.",
-      "Includes real-world projects"
+     "Learn in 3D structural steel modelling and detailing using BIM tools such as Tekla Structures. This course prepares you to create precise fabrication drawings, model complex steel connections, and coordinate effectively with project teams for real-world construction projects."
     ],
     link: "/programs"
   },
@@ -42,8 +39,7 @@ const coursesData = [
     title: "Rebar Estimation Course",
     image: Estimation,
     description: [
-      "Custom programs for firms & academic institutions.",
-      "Includes certification & LMS support"
+      "Learn to accurately estimate reinforcement quantities from structural drawings using manual methods and digital tools. This course equips you with the skills to prepare detailed rebar take-offs, cost estimates, and quantity summaries as per project specifications and international standards"
     ],
     link: "/programs"
   }

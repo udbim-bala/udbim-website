@@ -10,12 +10,12 @@ const testimonials = [
   },
   {
     name: "Faizal",
-    gender: "female",
+    gender: "male",
     text: `Expert instructors and structured modules made learning easy. Now I'm confident in Detailing and BIM tools.`,
   },
   {
     name: "Nivetha",
-    gender: "male",
+    gender: "female",
     text: `A great place to upskill with real-world applications. I landed a job within weeks of completing the course.`,
   },
 ];

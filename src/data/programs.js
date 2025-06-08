@@ -41,6 +41,15 @@ export const programs = [
       "Project Coordinator – Reinforcement Drawings (Middle East, USA, Europe)",
       "Remote Drafting Consultant (Freelance or Outsourced Projects)",
     ],
+    CourseModules: [
+      "Introduction to Rebar Detailing",
+      "2D Drafting Basics",
+      "Structural Interpretation",
+      "Rebar Placement Drawings",
+      "Bar Bending Schedules (BBS)",
+      "Standards and Best Practices",
+      "Practical Exercises",
+    ],
     link: "#",
   },
   {
@@ -64,6 +73,14 @@ export const programs = [
       "Precast BIM Rebar Specialist",
       "BIM Rebar Modeler for international EPC firms",
     ],
+    CourseModules: [
+      "Introduction to 3D Detailing",
+      "Revit for Reinforcement",
+      "BIM Collaboration",
+      "From 2D to 3D",
+      "Concrete Modeling",
+      "Practical Projects",
+    ],
     link: "#"
   },
   {
@@ -86,6 +103,21 @@ export const programs = [
       "Steel Detailing Coordinator",
       "BIM Draftsman – Precast Industry",
     ],
+      CourseModules: [
+      "Introduction to Structural Steel & Tekla ",
+      "Understanding Structural Drawings",
+      "Project Setup and Drawing Reading",
+      "3D Modelling of Steel Structures",
+      "Steel Connections in Tekla",
+      "Component & Assembly Management",
+      "Clash Detection and Coordination",
+      "Generating Fabrication & Erection Drawings",
+      "Reports, Lists & BOM Generation",
+      "Model Review & Revisions",
+      "Industry Standards & Codes",
+      "Project-Based Practice",
+      "Career Support & Job Readiness",
+    ],
     link: "#"
   },
   {
@@ -107,6 +139,20 @@ export const programs = [
       "Estimation Engineer (Rebar Fabrication Companies)",
       "Billing Engineer with rebar specialization",
       "Rebar Estimator (Middle East, Australia, USA-based EPCs and Contractors)",
+    ],
+    CourseModules: [
+      "Introduction to Rebar Estimation",
+      "Fundamentals of Reinforcement",
+      "Reading and Interpreting Structural Drawings",
+      "Manual Rebar Take-Off (Spreadsheet Based)",
+      "Introduction to ASA Software",
+      "ASA-Based Estimation Workflow",
+      "Quantity Verification & Cross-Check",
+      "Report Generation & Submission Format",
+      "Cost Estimation & Budgeting Basics",
+      "Project-Based Practice",
+      "QA/QC in Estimation",
+      "Career Support & Job Readiness",
     ],
     link: "#"
   },
