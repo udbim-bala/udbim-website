@@ -4,37 +4,17 @@ import "../aboutCom/Team.css";
 
 const aboutContent = {
   title: "About Our Team",
-  description: `Our training team consists of industry professionals with strong expertise along 10+ years industry in each course we offered. Each trainer brings years of practical experience from working on major infrastructure and construction projects across the globe.`,
+  description:
+    "Our training team consists of industry professionals with strong expertise along 10+ years industry in each course we offered. Each trainer brings years of practical experience from working on major infrastructure and construction projects across the globe.",
 
   coreExpertise: [
-    {
-      title: "Proficient in industry-standard top software's",
-      children: [],
-    },
-    {
-      title: "In-depth knowledge of international detailing standards and codes",
-      children: [],
-    },
-    {
-      title: "Hands-on Industry Experience",
-      children: [],
-    },
-    {
-      title: "Project Lifecycle Knowledge",
-      children: [],
-    },
-    {
-      title: "Code & Standard Expertise",
-      children: [],
-    },
-    {
-      title: "Training Pedagogy",
-      children: [],
-    },
-    {
-      title: "Placement-Driven Mentorship",
-      children: [],
-    },
+    { title: "Proficient in industry-standard top software's", children: [] },
+    { title: "In-depth knowledge of international detailing standards and codes", children: [] },
+    { title: "Hands-on Industry Experience", children: [] },
+    { title: "Project Lifecycle Knowledge", children: [] },
+    { title: "Code & Standard Expertise", children: [] },
+    { title: "Training Pedagogy", children: [] },
+    { title: "Placement-Driven Mentorship", children: [] },
   ],
 
   professionalBackground: [
@@ -64,46 +44,36 @@ const Team = () => {
   const [visibleItems, setVisibleItems] = useState([]);
 
   useEffect(() => {
-    const animateItems = () => {
-      const allItems = [];
-      
-      // Animate core expertise items
-      aboutContent.coreExpertise.forEach((_, idx) => {
-        allItems.push(`core-${idx}`);
-      });
+    const allItems = [];
 
-      // Animate professional background items and their children
-      aboutContent.professionalBackground.forEach((item, idx) => {
-        allItems.push(`prof-${idx}`);
-        item.children.forEach((_, childIdx) => {
-          allItems.push(`prof-${idx}-child-${childIdx}`);
-        });
-      });
+    aboutContent.coreExpertise.forEach((_, idx) => {
+      allItems.push(`core-${idx}`);
+    });
 
-      allItems.forEach((item, index) => {
-        setTimeout(() => {
-          setVisibleItems(prev => [...prev, item]);
-        }, index * 150);
+    aboutContent.professionalBackground.forEach((item, idx) => {
+      allItems.push(`prof-${idx}`);
+      item.children.forEach((_, childIdx) => {
+        allItems.push(`prof-${idx}-child-${childIdx}`);
       });
-    };
+    });
 
-    animateItems();
+    allItems.forEach((item, index) => {
+      setTimeout(() => {
+        setVisibleItems(prev => [...prev, item]);
+      }, index * 150);
+    });
   }, []);
 
   const renderItem = (item, prefix, index) => (
-    <div 
+    <div
       key={`${prefix}-${index}`}
-      className={`mindmap-item ${visibleItems.includes(`${prefix}-${index}`) ? 'visible' : ''}`}
+      className={`mindmap-item ${visibleItems.includes(`${prefix}-${index}`) ? "visible" : ""}`}
     >
       <div className="mindmap-connector">
-        {item.children.length > 0 ? (
-          <FaChevronRight className="icon-arrow" />
-        ) : (
-          <FaCheck className="icon-check" />
-        )}
+        {item.children.length > 0 ? <FaChevronRight className="icon-arrow" /> : <FaCheck className="icon-check" />}
       </div>
       <div className="mindmap-content">
-        {(item.title === "Trainers have worked on" || item.title === "Skilled in creating") ? (
+        {["Trainers have worked on", "Skilled in creating"].includes(item.title) ? (
           <strong>{item.title}</strong>
         ) : (
           item.title
@@ -113,9 +83,7 @@ const Team = () => {
             {item.children.map((child, childIdx) => (
               <div
                 key={`${prefix}-${index}-child-${childIdx}`}
-                className={`mindmap-child-item ${
-                  visibleItems.includes(`${prefix}-${index}-child-${childIdx}`) ? 'visible' : ''
-                }`}
+                className={`mindmap-child-item ${visibleItems.includes(`${prefix}-${index}-child-${childIdx}`) ? "visible" : ""}`}
               >
                 <div className="mindmap-child-connector">
                   <FaCheck className="icon-check" />
@@ -138,18 +106,14 @@ const Team = () => {
         <div className="mindmap-column">
           <h3 className="mindmap-title">Core Expertise</h3>
           <div className="mindmap-items">
-            {aboutContent.coreExpertise.map((item, idx) =>
-              renderItem(item, "core", idx)
-            )}
+            {aboutContent.coreExpertise.map((item, idx) => renderItem(item, "core", idx))}
           </div>
         </div>
 
         <div className="mindmap-column">
           <h3 className="mindmap-title">Professional Background</h3>
           <div className="mindmap-items">
-            {aboutContent.professionalBackground.map((item, idx) =>
-              renderItem(item, "prof", idx)
-            )}
+            {aboutContent.professionalBackground.map((item, idx) => renderItem(item, "prof", idx))}
           </div>
         </div>
       </div>

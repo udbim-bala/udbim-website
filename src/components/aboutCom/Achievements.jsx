@@ -15,6 +15,7 @@ const Achievements = () => {
       <h2 className="text-center achievements-title mb-5">
         Our Achievements
       </h2>
+
       <div className="row g-4 justify-content-center">
         {achievementsData.map((item, index) => (
           <div key={index} className="col-12 col-md-6 col-lg-3">

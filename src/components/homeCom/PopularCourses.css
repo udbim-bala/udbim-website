@@ -44,14 +44,13 @@ body {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #272361 !important;
+  color: #272361;
 }
 
 .course-features {
   list-style: none;
   padding: 0;
   margin: 0 0 15px;
-  text-align: justify !important;
 }
 
 .course-features li {

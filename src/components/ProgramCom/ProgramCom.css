@@ -354,7 +354,7 @@
   flex-wrap: wrap;
 }
 
-.price-tag, .duration-tag {
+.duration-tag {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -363,14 +363,13 @@
   border-radius: 8px;
   backdrop-filter: blur(5px);
 }
-
-.price-label, .duration-label {
+.duration-label {
   font-weight: 600;
   font-size: 0.9rem;
   opacity: 0.9;
 }
 
-.price, .duration {
+ .duration {
   font-weight: 700;
   font-size: 1.2rem;
 }

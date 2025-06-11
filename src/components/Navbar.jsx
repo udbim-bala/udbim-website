@@ -25,7 +25,7 @@ const Navbar = () => {
           <li><Link to='/aboutUs'>About Us</Link></li>
           <li><Link to='/programs'>Programs</Link></li>
           <li><Link to='/services'>Services</Link></li>
-          <li><Link to='/recruitors'>Hiring Solutions</Link></li>
+          <li><Link to='/hiring-solutions'>Hiring Solutions</Link></li>
           <li className='navbar-buttons-mobile'>
             <Link to='/login'>
               <Button variant='outline-primary' className='w-100 my-2'>Login Portal</Button>

@@ -9,13 +9,18 @@ const ProgramCom = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [showAll, setShowAll] = useState(false);
 
-  const filteredPrograms = programs.filter(program => program.category === selectedCategory);
-  const displayedPrograms = showAll ? filteredPrograms : filteredPrograms.slice(0, 4);
+  const filteredPrograms = programs.filter(
+    program => program.category === selectedCategory
+  );
+  const displayedPrograms = showAll
+    ? filteredPrograms
+    : filteredPrograms.slice(0, 4);
 
   return (
     <div className="programs-page">
       <h1 className="page-title">Our Learning Programs</h1>
-      
+
+      {/* Category Tabs */}
       <div className="category-tabs">
         {categories.map(category => (
           <button
@@ -32,10 +37,11 @@ const ProgramCom = () => {
         ))}
       </div>
 
+      {/* Program Details View or Grid */}
       {selectedProgram ? (
-        <ProgramDetail 
-          program={selectedProgram} 
-          onBack={() => setSelectedProgram(null)} 
+        <ProgramDetail
+          program={selectedProgram}
+          onBack={() => setSelectedProgram(null)}
         />
       ) : (
         <>

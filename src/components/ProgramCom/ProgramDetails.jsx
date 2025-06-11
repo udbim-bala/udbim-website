@@ -5,17 +5,26 @@ const ProgramDetail = ({ program, onBack }) => {
   const whatsappNumber = "918122149339";
   const message = `Hello, I am interested in the course: ${program.title}. Please provide more details or enroll me.`;
 
+  const googleFormLinks = {
+    "2D Rebar Detailing": "https://forms.gle/pM8kmnrQUxqEXtHN7",
+    "3D Rebar Detailing": "https://forms.gle/pM8kmnrQUxqEXtHN7",
+    "3D Structural Detailing": "https://forms.gle/u78xiExhW7DEirfX7",
+    "Rebar Estimation": "https://forms.gle/BmAVVtQuGW26hm1z7"
+  };
+
   const handleEnrollClick = () => {
-    const encodedMessage = encodeURIComponent(message);
-    const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    window.open(url, "_blank");
+    const formLink = googleFormLinks[program.title];
+    const targetURL = formLink 
+      ? formLink 
+      : `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(targetURL, "_blank");
   };
 
   const isUpcoming = program.category === "upcoming courses";
 
   return (
     <div className="program-detail-container">
-      {/* Sticky Back Button */}
+      {/* Back Button */}
       <div className="top-navigation">
         <button className="back-to-programs-button" onClick={onBack}>
           <span className="back-arrow-icon">&larr;</span>
@@ -23,66 +32,54 @@ const ProgramDetail = ({ program, onBack }) => {
         </button>
       </div>
 
+      {/* Header */}
       <div className="detail-header">
         <div className="image-container">
           <img src={program.image} alt={program.title} className="detail-image" />
           {isUpcoming && <div className="ribbon">Coming Soon</div>}
         </div>
         <div className="header-text">
-          <div className="title-wrapper">
-            <h1 className="detail-title">{program.title}</h1>
-            {program.softwareUsed && (
-              <div className="software-badges">
-                {program.softwareUsed.map((software, index) => (
-                  <span key={index} className="software-badge">{software}</span>
-                ))}
-              </div>
-            )}
-          </div>
-          
-          <div className="price-duration">
-            <div className="price-tag">
-              <span className="price-label">Course Fee:</span>
-              <span className="price">{program.price}</span>
+          <h1 className="detail-title">{program.title}</h1>
+
+          {program.softwareUsed && (
+            <div className="software-badges">
+              {program.softwareUsed.map((software, i) => (
+                <span key={i} className="software-badge">{software}</span>
+              ))}
             </div>
-            <div className="duration-tag">
-              <span className="duration-label">Duration:</span>
-              <span className="duration">{program.duration}</span>
-            </div>
-          </div>
-          
-          {program.longDesc && (
-            <p className="long-description">{program.longDesc}</p>
           )}
+
+          <div className="price-duration">
+            <span className="duration-label">Duration:</span>
+            <span className="duration">{program.duration}</span>
+          </div>
+
+          {program.longDesc && <p className="long-description">{program.longDesc}</p>}
         </div>
       </div>
 
+      {/* Content */}
       <div className="detail-content">
         {isUpcoming ? (
           <section className="coming-soon-section">
-            <div className="coming-soon-content">
-              <h2>Coming Soon</h2>
-              <p>This course is currently under development. Please check back later or contact us for more information.</p>
-              <button className="notify-me">Notify Me When Available</button>
-            </div>
+            <h2>Coming Soon</h2>
+            <p>This course is currently under development. Please check back later or contact us for more information.</p>
+            <button className="notify-me" onClick={handleEnrollClick}>Notify Me When Available</button>
           </section>
         ) : (
           <>
-            {program.CourseModules && (
+            {/* Modules */}
+            {program.CourseModules?.length > 0 && (
               <section className="modules-section">
-                <div className="section-header">
-                  <h2>Course Curriculum</h2>
-                  <div className="section-divider"></div>
-                </div>
+                <h2>Course Curriculum</h2>
+                <div className="section-divider"></div>
                 <div className="modules-grid">
-                  {program.CourseModules.map((module, index) => (
-                    <div key={index} className="module-card">
-                      <div className="module-number">{index + 1}</div>
+                  {program.CourseModules.map((module, i) => (
+                    <div key={i} className="module-card">
+                      <div className="module-number">{i + 1}</div>
                       <div className="module-content">
                         <h3 className="module-title">{module}</h3>
-                        <div className="module-progress">
-                          <span className="progress-text">Module {index + 1}</span>
-                        </div>
+                        <span className="progress-text">Module {i + 1}</span>
                       </div>
                     </div>
                   ))}
@@ -90,75 +87,67 @@ const ProgramDetail = ({ program, onBack }) => {
               </section>
             )}
 
-            {program.careerPaths && (
+            {/* Career Opportunities */}
+            {program.careerPaths?.length > 0 && (
               <section className="career-section">
-                <div className="section-header">
-                  <h2>Career Opportunities</h2>
-                  <div className="section-divider"></div>
-                </div>
+                <h2>Career Opportunities</h2>
+                <div className="section-divider"></div>
                 <ul className="career-list">
-                  {program.careerPaths.map((path, index) => (
-                    <li key={index} className="career-item">
-                      <span className="career-icon">🎯</span>
-                      {path}
-                    </li>
+                  {program.careerPaths.map((path, i) => (
+                    <li key={i} className="career-item">🎯 {path}</li>
                   ))}
                 </ul>
               </section>
             )}
 
-            <div className="details-accordion">
-              <details className="detail-accordion-item" open>
-                <summary className="accordion-header">
-                  <h3>Course Details</h3>
-                  <span className="accordion-icon">+</span>
-                </summary>
-                <div className="accordion-content">
-                  {program.trainingMode && (
-                    <div className="info-section">
-                      <h4>Training Modes</h4>
-                      <ul className="info-list">
-                        {program.trainingMode.map((mode, index) => (
-                          <li key={index}>
-                            <span className="info-icon">🎓</span>
-                            {mode}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+            {/* Accordion */}
+            <details className="detail-accordion-item" open>
+              <summary className="accordion-header">
+                <h3>Course Details</h3>
+                <span className="accordion-icon">+</span>
+              </summary>
+              <div className="accordion-content">
+                {/* Training Modes */}
+                {program.trainingMode?.length > 0 && (
+                  <div className="info-section">
+                    <h4>Training Modes</h4>
+                    <ul className="info-list">
+                      {program.trainingMode.map((mode, i) => (
+                        <li key={i}>🎓 {mode}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                  {program.batchOptions && (
-                    <div className="info-section">
-                      <h4>Batch Options</h4>
-                      <ul className="info-list">
-                        {program.batchOptions.map((option, index) => (
-                          <li key={index}>
-                            <span className="info-icon">📅</span>
-                            {option}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                {/* Batch Options */}
+                {program.batchOptions?.length > 0 && (
+                  <div className="info-section">
+                    <h4>Batch Options</h4>
+                    <ul className="info-list">
+                      {program.batchOptions.map((option, i) => (
+                        <li key={i}>📅 {option}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                  {program.eligibility && (
-                    <div className="info-section">
-                      <h4>Eligibility</h4>
-                      <p className="eligibility-text">{program.eligibility}</p>
-                    </div>
-                  )}
-                </div>
-              </details>
-            </div>
+                {/* Eligibility */}
+                {program.eligibility && (
+                  <div className="info-section">
+                    <h4>Eligibility</h4>
+                    <p className="eligibility-text">{program.eligibility}</p>
+                  </div>
+                )}
+              </div>
+            </details>
 
+            {/* Enroll Section */}
             <div className="enroll-section">
               <div className="enroll-card">
                 <h3>Ready to Start Learning?</h3>
                 <p>Join hundreds of students who have transformed their careers with our courses</p>
                 <button className="enroll-button" onClick={handleEnrollClick}>
-                  <span className="button-icon">📩</span>
-                  Enroll Now
+                  📩 Enroll Now
                 </button>
                 <div className="enroll-benefits">
                   <span className="benefit-item">✅ Flexible Learning</span>

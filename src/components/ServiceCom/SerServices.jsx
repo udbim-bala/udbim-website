@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { FaDrawPolygon, FaCube, FaCalculator, FaBuilding, FaTimes, FaChevronRight } from 'react-icons/fa';
+import {
+  FaDrawPolygon, FaCube, FaCalculator, FaBuilding, FaTimes, FaChevronRight
+} from 'react-icons/fa';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 import './SerServices.css';
 import Service1 from '../../assets/Images/Service1.jpg';
 import Service2 from '../../assets/Images/Service2.jpg';
 import Service3 from '../../assets/Images/Service3.jpg';
 import Service4 from '../../assets/Images/Service4.jpg';
 
+// ---------- SERVICE DATA ----------
 const services = [
   {
     icon: <FaDrawPolygon />,
@@ -131,37 +135,31 @@ const services = [
   }
 ];
 
+// ---------- SERVICE CARD ----------
 const ServiceCard = ({ service, index, onClick }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
 
   useEffect(() => {
     if (inView) controls.start('visible');
-  }, [controls, inView]);
+  }, [inView, controls]);
 
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
-        delay: index * 0.15, 
-        duration: 0.6, 
-        ease: [0.16, 1, 0.3, 1]
-      }
+      transition: { delay: index * 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }
     },
-    hover: {
-      y: -10,
-      boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)"
-    }
+    hover: { y: -10, boxShadow: '0 15px 30px rgba(0,0,0,0.15)' }
   };
 
   return (
-    <motion.div 
-      className="service-card" 
-      ref={ref} 
-      initial="hidden" 
-      animate={controls} 
+    <motion.div
+      className="service-card"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
       variants={variants}
       whileHover="hover"
       onClick={() => onClick(service)}
@@ -185,6 +183,7 @@ const ServiceCard = ({ service, index, onClick }) => {
   );
 };
 
+// ---------- MODAL ----------
 const ServiceDetailModal = ({ service, onClose }) => {
   const modalVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -194,55 +193,38 @@ const ServiceDetailModal = ({ service, onClose }) => {
 
   return (
     <div className="service-detail-modal">
-      <motion.div 
-        className="modal-overlay" 
-        onClick={onClose}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      />
-      
-      <motion.div 
-        className="modal-content"
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        variants={modalVariants}
-      >
-        <button className="close-button" onClick={onClose}>
-          <FaTimes />
-        </button>
-        
+      <motion.div className="modal-overlay" onClick={onClose} initial="hidden" animate="visible" exit="exit" />
+      <motion.div className="modal-content" initial="hidden" animate="visible" exit="exit" variants={modalVariants}>
+        <button className="close-button" onClick={onClose}><FaTimes /></button>
+
         <div className="modal-header" style={{ backgroundColor: service.color }}>
           <div className="modal-header-content">
-            <div className="service-icon">
-              {service.icon}
-            </div>
+            <div className="service-icon">{service.icon}</div>
             <h2>{service.title}</h2>
             <p className="service-overview">{service.details.overview}</p>
           </div>
           <div className="modal-header-accent" style={{ backgroundColor: service.accent }} />
         </div>
-        
+
         <div className="modal-body">
           <div className="modal-section">
             <h3>What We Offer</h3>
             <div className="offer-grid">
-              {service.details.offers.map((offer, index) => (
-                <div key={index} className="offer-card">
+              {service.details.offers.map((offer, i) => (
+                <div key={i} className="offer-card">
                   <div className="offer-icon" style={{ color: service.color }}>•</div>
                   <p>{offer}</p>
                 </div>
               ))}
             </div>
           </div>
-          
+
           {service.details.shopDrawings && (
             <div className="modal-section">
               <h3>Shop Drawings Include</h3>
               <ul className="styled-list">
-                {service.details.shopDrawings.map((item, index) => (
-                  <li key={index}>
+                {service.details.shopDrawings.map((item, i) => (
+                  <li key={i}>
                     <span className="list-icon" style={{ color: service.color }}>✓</span>
                     {item}
                   </li>
@@ -250,26 +232,26 @@ const ServiceDetailModal = ({ service, onClose }) => {
               </ul>
             </div>
           )}
-          
+
           {service.details.reports && (
             <div className="modal-section">
               <h3>Reports & Schedules</h3>
               <ul className="styled-list">
-                {service.details.reports.map((report, index) => (
-                  <li key={index}>
+                {service.details.reports.map((item, i) => (
+                  <li key={i}>
                     <span className="list-icon" style={{ color: service.color }}>✓</span>
-                    {report}
+                    {item}
                   </li>
                 ))}
               </ul>
             </div>
           )}
-          
+
           <div className="modal-section why-choose-us">
             <h3>Why Choose Us</h3>
             <div className="benefits-grid">
-              {service.details.whyChooseUs.map((reason, index) => (
-                <div key={index} className="benefit-card" style={{ borderColor: service.color }}>
+              {service.details.whyChooseUs.map((reason, i) => (
+                <div key={i} className="benefit-card" style={{ borderColor: service.color }}>
                   <p>{reason}</p>
                 </div>
               ))}
@@ -281,6 +263,7 @@ const ServiceDetailModal = ({ service, onClose }) => {
   );
 };
 
+// ---------- MAIN COMPONENT ----------
 const SerServices = () => {
   const [selectedService, setSelectedService] = useState(null);
   const controls = useAnimation();
@@ -288,7 +271,7 @@ const SerServices = () => {
 
   useEffect(() => {
     if (inView) controls.start('visible');
-  }, [controls, inView]);
+  }, [inView, controls]);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -298,7 +281,7 @@ const SerServices = () => {
   return (
     <section className="ser-services" id="services">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="section-header"
           ref={ref}
           initial="hidden"
@@ -313,24 +296,24 @@ const SerServices = () => {
             Trusted by contractors and engineers worldwide for precision and reliability.
           </p>
         </motion.div>
-        
+
         <div className="services-grid">
           {services.map((service, index) => (
-            <ServiceCard 
-              key={index} 
-              service={service} 
-              index={index} 
+            <ServiceCard
+              key={service.title}
+              service={service}
+              index={index}
               onClick={setSelectedService}
             />
           ))}
         </div>
       </div>
-      
+
       <AnimatePresence>
         {selectedService && (
-          <ServiceDetailModal 
-            service={selectedService} 
-            onClose={() => setSelectedService(null)} 
+          <ServiceDetailModal
+            service={selectedService}
+            onClose={() => setSelectedService(null)}
           />
         )}
       </AnimatePresence>

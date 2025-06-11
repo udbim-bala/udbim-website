@@ -1,13 +1,39 @@
 import React, { useState } from 'react';
-import { FaChartLine, FaLaptopCode, FaUserGraduate, FaGlobe, FaTools } from 'react-icons/fa';
+import {
+  FaChartLine,
+  FaLaptopCode,
+  FaUserGraduate,
+  FaGlobe,
+  FaTools
+} from 'react-icons/fa';
 import '../aboutCom/Difference.css';
 
 const differences = [
-  { icon: <FaChartLine />, title: 'Industry-Focused Curriculum', desc: 'Designed by industry experts to meet real job requirements.' },
-  { icon: <FaLaptopCode />, title: 'Live Project Exposure', desc: 'Hands-on training with real projects for practical learning.' },
-  { icon: <FaUserGraduate />, title: 'Individual Mentorship', desc: 'Personalized guidance to boost your skills and confidence.' },
-  { icon: <FaGlobe />, title: 'Global Standards & Latest Software', desc: 'Learn using the latest global software and practices.' },
-  { icon: <FaTools />, title: 'Practical Assignments & Error Checks', desc: 'Work on tasks with real-time error correction support.' },
+  {
+    icon: <FaChartLine />,
+    title: 'Industry-Focused Curriculum',
+    desc: 'Designed by industry experts to meet real job requirements.',
+  },
+  {
+    icon: <FaLaptopCode />,
+    title: 'Live Project Exposure',
+    desc: 'Hands-on training with real projects for practical learning.',
+  },
+  {
+    icon: <FaUserGraduate />,
+    title: 'Individual Mentorship',
+    desc: 'Personalized guidance to boost your skills and confidence.',
+  },
+  {
+    icon: <FaGlobe />,
+    title: 'Global Standards & Latest Software',
+    desc: 'Learn using the latest global software and practices.',
+  },
+  {
+    icon: <FaTools />,
+    title: 'Practical Assignments & Error Checks',
+    desc: 'Work on tasks with real-time error correction support.',
+  },
 ];
 
 const Difference = () => {

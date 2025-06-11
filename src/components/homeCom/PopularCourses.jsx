@@ -1,47 +1,48 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './PopularCourses.css';
-import TwoDRebar from '../../assets/Images/Popular1.jpg'
-import ThreeDRebar from '../../assets/Images/Popular2.jpg'
-import Steel_Detailing from '../../assets/Images/Popular3.jpg'
-import Estimation from '../../assets/Images/Popular4.png'
+
+import TwoDRebar from '../../assets/Images/Popular1.jpg';
+import ThreeDRebar from '../../assets/Images/Popular2.jpg';
+import Steel_Detailing from '../../assets/Images/Popular3.jpg';
+import Estimation from '../../assets/Images/Popular4.png';
 
 const coursesData = [
   {
     id: 1,
     title: "2D Rebar Detailing - Professional Course",
-    image:TwoDRebar,
+    image: TwoDRebar,
     description: [
-      "Master the fundamentals of 2D rebar detailing, This course is designed to train professionals in preparing accurate reinforcement placing drawings, and producing bar bending schedules as per global standards"
+      "Master the fundamentals of 2D rebar detailing. This course trains professionals in preparing accurate reinforcement placing drawings and producing bar bending schedules as per global standards."
     ],
-    link: "/programs"
+    link: "/programs",
   },
   {
     id: 2,
     title: "3D Rebar Detailing - BIM Course",
     image: ThreeDRebar,
     description: [
-      "Learn how to model, manage, and visualize reinforcement using Revit in 3D. This course equips rebar detailers with hands-on BIM skills aligned with global standards, improving accuracy, coordination, and construction efficiency."
+      "Learn how to model, manage, and visualize reinforcement using Revit in 3D. Equip yourself with hands-on BIM skills aligned with global standards to improve accuracy and efficiency."
     ],
-    link: "/programs"
+    link: "/programs",
   },
   {
     id: 3,
     title: "Steel Detailing - BIM Course",
     image: Steel_Detailing,
     description: [
-     "Learn in 3D structural steel modelling and detailing using BIM tools such as Tekla Structures. This course prepares you to create precise fabrication drawings, model complex steel connections, and coordinate effectively with project teams for real-world construction projects."
+      "Master 3D structural steel modeling using tools like Tekla Structures. Create precise fabrication drawings, model complex connections, and coordinate with project teams effectively."
     ],
-    link: "/programs"
+    link: "/programs",
   },
   {
     id: 4,
     title: "Rebar Estimation Course",
     image: Estimation,
     description: [
-      "Learn to accurately estimate reinforcement quantities from structural drawings using manual methods and digital tools. This course equips you with the skills to prepare detailed rebar take-offs, cost estimates, and quantity summaries as per project specifications and international standards"
+      "Learn to estimate reinforcement quantities from structural drawings using manual and digital tools. Prepare detailed rebar take-offs, cost estimates, and quantity summaries to international standards."
     ],
-    link: "/programs"
+    link: "/programs",
   }
 ];
 
@@ -55,8 +56,9 @@ const PopularCourses = () => {
             <h2 className="main-title">Our Most Enrolled Programs</h2>
           </Col>
         </Row>
+
         <Row className="g-4">
-          {coursesData.map((course) => (
+          {coursesData.map(course => (
             <Col key={course.id} sm={6} lg={3} className="d-flex">
               <Card className="course-card w-100">
                 <div className="card-img-container">

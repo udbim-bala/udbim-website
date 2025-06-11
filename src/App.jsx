@@ -19,16 +19,16 @@ import ScrollToTop from './ScrollToTop';
 const App = () => {
   return (
     <>
-    <ScrollToTop/>  
+      <ScrollToTop />
       <Navbar />
       <div style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/programs" element={<Programs />} />
-      <Route path="/programs/:category/:id" element={<ProgramDetails />} />
+          <Route path="/programs/:category/:id" element={<ProgramDetails />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/recruitors" element={<Recruitors />} />
+          <Route path="/hiring-solutions" element={<Recruitors />} />
           <Route path="/login" element={<LoginPortal />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

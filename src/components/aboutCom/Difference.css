@@ -12,7 +12,6 @@
   margin-bottom: 2rem;
   text-align: center;
   font-weight: 700;
-  color: #272361;
   position: relative;
 }
 
@@ -33,7 +32,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.2rem;
-  grid-template-rows: auto auto auto;
   grid-template-areas:
     "item1 item2"
     "item3 item4"
@@ -47,12 +45,11 @@
 .difference-grid-list li:nth-child(5) { grid-area: item5; }
 
 .grid-item {
+  background: #f9f9f9;
   border: 2px solid transparent;
   border-image: linear-gradient(45deg, #4655A5, #0DBCD4) 1;
-  /* border-radius: 10px; */
   cursor: pointer;
   overflow: hidden;
-  background: #f9f9f9;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -70,39 +67,28 @@
   gap: 0.6rem;
   font-weight: 600;
   font-size: 1rem;
-  user-select: none;
   background: #fff;
   color: #272361;
+  user-select: none;
 }
 
-/* .grid-header .icon {
+.grid-header .icon {
   font-size: 1.6rem;
   background: linear-gradient(90deg, #4655A5, #0DBCD4);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  flex-shrink: 0;
-} */
- .grid-header .icon {
-  font-size: 1.6rem;
-  background: linear-gradient(90deg, #4655A5, #0DBCD4);
-  background-clip: text; /* <-- standard version */
-  -webkit-background-clip: text; /* <-- vendor-prefixed for Safari */
-  -webkit-text-fill-color: transparent;
-  color: #272361;
   flex-shrink: 0;
 }
-
 
 .grid-header h3 {
   flex-grow: 1;
   margin: 0;
   font-size: 1rem;
-  color: #272361;
 }
 
 .grid-header .arrow {
   font-size: 1.2rem;
-  color: #272361;
   transition: transform 0.3s ease;
 }
 
@@ -116,7 +102,6 @@
   padding: 0 1rem;
   background: linear-gradient(90deg, #4655A5, #0DBCD4);
   transition: max-height 0.5s ease, padding 0.3s ease;
-  flex-grow: 1;
 }
 
 .grid-item.active .grid-content {

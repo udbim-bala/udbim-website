@@ -19,7 +19,7 @@ const LoginPage = () => {
   useEffect(() => {
     const savedEmail = sessionStorage.getItem('email');
     const remember = sessionStorage.getItem('rememberMe') === 'true';
-    
+
     if (savedEmail && remember) {
       setFormData(prev => ({ ...prev, email: savedEmail }));
       setRememberMe(true);
@@ -44,11 +44,9 @@ const LoginPage = () => {
       return;
     }
 
-    // Simulate authentication
     if (isLogin) {
       // Login logic
       if (formData.email && formData.password) {
-        // Store session data if "Remember me" is checked
         if (rememberMe) {
           sessionStorage.setItem('email', formData.email);
           sessionStorage.setItem('rememberMe', 'true');
@@ -57,10 +55,7 @@ const LoginPage = () => {
           sessionStorage.removeItem('rememberMe');
         }
 
-        // Store authentication token (simulated)
         sessionStorage.setItem('authToken', 'simulated-token');
-        
-        // Redirect to dashboard or home page
         navigate('/');
       } else {
         setError('Please fill in all fields');
@@ -68,16 +63,13 @@ const LoginPage = () => {
     } else {
       // Signup logic
       if (formData.name && formData.email && formData.password) {
-        // Store user data (in a real app, this would go to your backend)
         const users = JSON.parse(sessionStorage.getItem('users')) || [];
         users.push({
           name: formData.name,
           email: formData.email,
-          password: formData.password // Note: In real apps, never store plain passwords
+          password: formData.password // In real apps, never store plain passwords
         });
         sessionStorage.setItem('users', JSON.stringify(users));
-        
-        // Auto-login after signup
         sessionStorage.setItem('authToken', 'simulated-token');
         navigate('/');
       } else {
@@ -93,8 +85,8 @@ const LoginPage = () => {
           <h2>{isLogin ? 'Login' : 'Create Account'}</h2>
           <p>
             {isLogin ? "Don't have an account?" : "Already have an account?"}
-            <button 
-              className="toggle-form-btn" 
+            <button
+              className="toggle-form-btn"
               onClick={() => {
                 setIsLogin(!isLogin);
                 setError('');
@@ -162,9 +154,9 @@ const LoginPage = () => {
 
           {isLogin && (
             <div className="d-flex justify-content-between align-items-center mb-3">
-              <Form.Check 
-                type="checkbox" 
-                label="Remember me" 
+              <Form.Check
+                type="checkbox"
+                label="Remember me"
                 checked={rememberMe}
                 onChange={(e) => setRememberMe(e.target.checked)}
               />

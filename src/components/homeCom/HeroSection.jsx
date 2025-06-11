@@ -2,26 +2,35 @@ import React from 'react';
 import '../homeCom/HeroSection.css';
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
 import { Container, Row, Col } from 'react-bootstrap';
-import Home2 from '../../assets/Images/Home-2.jpg';
-import Home3 from '../../assets/Images/Home-3.jpg';
-import BIM from '../../assets/Images/BIM.png';
-import HeroImg from '../../assets/Images/Hero.png'; // Your actual image
+
+import Home2 from '../../assets/images/Home-2.jpg';
+import Home3 from '../../assets/images/Home-3.jpg';
+import BIM from '../../assets/images/BIM.png';
+import HeroImg from '../../assets/images/Hero.png';
 
 const HeroSection = () => {
+  const scrollToSection = () => {
+    const section = document.getElementById('home-2nd');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="container-fluid pt-5 px-5 py-5 pb-5 hero-section section-wrapper">
+      <div className="container-fluid pt-5 px-5 py-5 hero-section section-wrapper">
         <Row className="m-0 p-0 align-items-center">
           <Col md={6} className="text-section">
             <h1 className="hero-h1">
               Want to become a Highly Skilled Digital Engineer?
             </h1>
             <p className="hero-subtext">
-              Start your journey with <strong>UD-BIM Training Institute</strong>, a premier training hub in Chennai. Dive into <strong>Practical Certified Courses in Digital Engineering</strong>. Your path to professional success starts here.
-              In Live - <strong>Online</strong> and <strong>Offline</strong> mode Training
+              Start your journey with <strong>UD-BIM Training Institute</strong>, a premier training hub in Chennai. Dive into <strong>Practical Certified Courses in Digital Engineering</strong>. Your path to professional success starts here. In Live - <strong>Online</strong> and <strong>Offline</strong> mode Training
             </p>
-            <button className="read-more-btn">Explore Now</button>
+            <button className="read-more-btn" onClick={scrollToSection}>
+              Explore Now
+            </button>
           </Col>
           <Col md={6}>
             <img src={HeroImg} alt="Digital Engineering" className="img-fluid hero-image" />
@@ -30,7 +39,7 @@ const HeroSection = () => {
       </div>
 
       {/* Academy Section */}
-      <Container fluid className="px-5 py-2 academy-section section-wrapper">
+      <Container fluid className="px-5 py-2 academy-section section-wrapper" id="home-2nd">
         <Row className="align-items-center">
           <Col md={5}>
             <div className="image-grid">
@@ -40,7 +49,7 @@ const HeroSection = () => {
               <div className="experience-circle">
                 <div>
                   <i className="fas fa-running fa-2x"></i>
-                  <h3 className='text-light'>10+</h3>
+                  <h3 className="text-light">10+</h3>
                   <p>Years of experience</p>
                 </div>
               </div>
@@ -49,15 +58,13 @@ const HeroSection = () => {
 
           <Col md={7}>
             <div className="academy-right">
-              <h3 className="about-us">Why Universal Detailing and BIM Training Institute?</h3>
+              <h3 className="about-us">
+                Why Universal Detailing and BIM Training Institute?
+              </h3>
               <p className="no1">#1 Detailing & BIM Training Institute</p>
               <p className="description">
-                At Universal Detailing & BIM Training Institute, we provide career-focused training
-                in Rebar Detailing, Structural Detailing, Estimation, MEP & BIM. Whether you're
-                a fresher or working professional, our programs are designed to make you job-ready
-                with real-world skills.
+                At Universal Detailing Training Institute, we provide career-focused training in Rebar Detailing, Structural Detailing, Estimation, MEP & BIM. Whether you're a fresher or a working professional, our programs are designed to make you job-ready with real-world skills.
               </p>
-
               <div className="features">
                 <h4>KEY BENEFITS</h4>
                 <ul>

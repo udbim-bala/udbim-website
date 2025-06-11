@@ -1,20 +1,18 @@
-import React from 'react'
-import HeroSection from '../components/homeCom/HeroSection'
-import PopularCourses from '../components/homeCom/PopularCourses'
-import TestimonialSection from '../components/homeCom/Testimonial'
-import Placement from '../components/homeCom/Placement'
-
+import React from 'react';
+import HeroSection from '../components/homeCom/HeroSection';
+import PopularCourses from '../components/homeCom/PopularCourses';
+import Placement from '../components/homeCom/Placement';
+import TestimonialSection from '../components/homeCom/Testimonial';
 
 const Home = () => {
   return (
     <div>
-      <HeroSection/>
-      <PopularCourses/>
-      <Placement/>
-      <TestimonialSection/>
-      
+      <HeroSection />
+      <PopularCourses />
+      <Placement />
+      <TestimonialSection />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

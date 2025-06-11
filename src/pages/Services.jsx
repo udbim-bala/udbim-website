@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/Services.css'
 import SerHero from '../components/ServiceCom/SerHero'
 import SerServices from '../components/ServiceCom/SerServices'
 import SerContact from '../components/ServiceCom/SerContact'
@@ -9,7 +8,6 @@ const Services = () => {
     <div>
       <SerHero/>
       <SerServices/>
-      {/* <SerWhyChoose/> */}
       <SerContact/>
     </div>
   )

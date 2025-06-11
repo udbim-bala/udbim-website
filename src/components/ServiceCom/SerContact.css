@@ -84,7 +84,7 @@
 .info-card {
   background: linear-gradient(135deg, #2a7fba, #0dbcd4);
   color: white;
-  height: 50%;
+  height: 100%;
 }
 
 .info-card .card-header h3,

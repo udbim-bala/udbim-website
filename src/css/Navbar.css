@@ -1,4 +1,3 @@
-/* Navbar container */
 .navbarItems {
   display: flex;
   justify-content: space-between;
@@ -10,14 +9,12 @@
   z-index: 100;
 }
 
-/* Logo */
 .navbar-logo img {
   width: 320px;
   height: auto;
   display: block;
 }
 
-/* Menu box */
 .navbar-menu-box {
   display: flex;
   align-items: center;
@@ -27,10 +24,8 @@
   box-shadow: 
     0 0 6px 1px rgba(70, 85, 165, 0.6),
     0 0 10px 2px rgba(13, 188, 212, 0.6);
-
 }
 
-/* Navbar links */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -40,7 +35,6 @@
   padding: 5px;
 }
 
-/* Link styles */
 .navbar-links li a {
   text-decoration: none;
   color: #333;
@@ -50,22 +44,20 @@
   transition: color 0.3s ease;
 }
 
-/* Hover effect */
 .navbar-links li a:hover {
   color: #0dbcd4;
 }
+
 .navbar-links li a:hover::after {
   width: 100%;
 }
 
-/* Desktop buttons */
 .navbar-buttons {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-/* Button styles */
 .navbar-buttons button,
 .navbar-buttons-mobile button {
   padding: 6px 12px;
@@ -76,13 +68,13 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
 .navbar-buttons button:hover,
 .navbar-buttons-mobile button:hover {
   background: linear-gradient(45deg, #4655a5, #0dbcd4);
   color: #fff;
 }
 
-/* Hamburger icon */
 .menu-icon {
   display: none;
   font-size: 24px;
@@ -90,16 +82,15 @@
   margin-left: auto;
 }
 
-/* Mobile buttons */
 .navbar-buttons-mobile {
   display: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .navbar-menu-box {
     box-shadow: none;
   }
+
   .navbar-links {
     position: absolute;
     top: 60px;
@@ -118,13 +109,16 @@
     z-index: 99;
     display: none;
   }
+
   .navbar-links.active {
     max-height: 500px;
     display: flex;
   }
+
   .navbar-buttons {
     display: none;
   }
+
   .navbar-buttons-mobile {
     display: flex;
     flex-direction: column;
@@ -132,6 +126,7 @@
     margin-top: 10px;
     gap: 10px;
   }
+
   .menu-icon {
     display: block;
   }
