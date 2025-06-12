@@ -2,6 +2,7 @@ import React from 'react';
 import './ProgramCom.css';
 
 const ProgramDetail = ({ program, onBack }) => {
+  
   const whatsappNumber = "918122149339";
   const message = `Hello, I am interested in the course: ${program.title}. Please provide more details or enroll me.`;
 
@@ -13,11 +14,24 @@ const ProgramDetail = ({ program, onBack }) => {
   };
 
   const handleEnrollClick = () => {
-    const formLink = googleFormLinks[program.title];
-    const targetURL = formLink 
-      ? formLink 
-      : `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(targetURL, "_blank");
+    const isCourse = program.category === "courses";
+    const isUpcomingOrPackage =
+      program.category === "upcoming courses" || program.category === "packages";
+
+    const matchedLink = Object.entries(googleFormLinks).find(([key]) =>
+      program.title.toLowerCase().includes(key.toLowerCase())
+    )?.[1];
+
+    if (isCourse && matchedLink) {
+      window.open(matchedLink, "_blank");
+    } else if (isUpcomingOrPackage) {
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+    } else {
+      alert("Enrollment option not available.");
+    }
+
+    console.log("Program title:", program.title);
   };
 
   const isUpcoming = program.category === "upcoming courses";

@@ -45,7 +45,7 @@ export const programs = [
       "Standards and Best Practices",
       "Practical Exercises",
     ],
-    link: "#",
+    link: "https://forms.gle/pM8kmnrQUxqEXtHN7",
   },
   {
     id: 2,
@@ -78,7 +78,7 @@ export const programs = [
       "Concrete Modeling",
       "Practical Projects",
     ],
-    link: "#",
+    link: "https://forms.gle/pM8kmnrQUxqEXtHN7",
   },
   {
     id: 3,
@@ -117,7 +117,7 @@ export const programs = [
       "Project-Based Practice",
       "Career Support & Job Readiness",
     ],
-    link: "#",
+    link: "https://forms.gle/u78xiExhW7DEirfX7",
   },
   {
     id: 4,
@@ -154,7 +154,7 @@ export const programs = [
       "QA/QC in Estimation",
       "Career Support & Job Readiness",
     ],
-    link: "#",
+    link: "https://forms.gle/BmAVVtQuGW26hm1z7",
   },
   {
     id: 7,
@@ -174,7 +174,7 @@ export const programs = [
       "HVAC BIM Engineer",
       "Plumbing and Electrical Draftsman (BIM)",
     ],
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20MEP%20–%20BIM",
   },
   {
     id: 8,
@@ -195,7 +195,7 @@ export const programs = [
       "BIM Coordinator – Precast Plants and Construction Sites",
       "QC Engineer – Precast Fabrication (with BIM integration)",
     ],
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20Precast%20Detailing",
   },
   {
     id: 9,
@@ -216,7 +216,7 @@ export const programs = [
       "AutoCAD HVAC Detailer",
       "Quantity Surveyor (Ducting)",
     ],
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20Ducting%20Detailing",
   },
   {
     id: 10,
@@ -237,7 +237,7 @@ export const programs = [
       "Draftsman – Structural Design",
       "Construction Site Assistant",
     ],
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20Structural%20Design",
   },
   {
     id: 11,
@@ -258,7 +258,7 @@ export const programs = [
       "CAD Technician",
       "BIM Coordinator Assistant",
     ],
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20Software%20Training%20Course",
   },
   {
     id: 12,
@@ -279,7 +279,7 @@ export const programs = [
       "Structural Draftsman",
       "Steel Fabrication Coordinator",
     ],
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20Steel%20SDS2%20Training",
   },
   {
     id: 5,
@@ -300,7 +300,7 @@ export const programs = [
     ],
     trainingMode: ["Our Branch", "Online", "Corporate Onsite"],
     batchOptions: ["Weekday", "Weekend"],
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20the%20Detailing%20Office%20Package",
   },
   {
     id: 6,
@@ -321,7 +321,7 @@ export const programs = [
     ],
     trainingMode: ["On-Campus", "Online", "Hybrid"],
     certification: "Certificate of Completion recognized by industry partners",
-    link: "#",
+    link: "https://wa.me/918122149339?text=I'm%20interested%20in%20the%20College%20Bulk%20Package",
   },
 ];
 

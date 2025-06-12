@@ -15,7 +15,7 @@ const coursesData = [
     description: [
       "Master the fundamentals of 2D rebar detailing. This course trains professionals in preparing accurate reinforcement placing drawings and producing bar bending schedules as per global standards."
     ],
-    link: "/programs",
+   link: "/programs/courses/1",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const coursesData = [
     description: [
       "Learn how to model, manage, and visualize reinforcement using Revit in 3D. Equip yourself with hands-on BIM skills aligned with global standards to improve accuracy and efficiency."
     ],
-    link: "/programs",
+    link: "/programs/courses/2"
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const coursesData = [
     description: [
       "Master 3D structural steel modeling using tools like Tekla Structures. Create precise fabrication drawings, model complex connections, and coordinate with project teams effectively."
     ],
-    link: "/programs",
+    link: "/programs/courses/3"
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const coursesData = [
     description: [
       "Learn to estimate reinforcement quantities from structural drawings using manual and digital tools. Prepare detailed rebar take-offs, cost estimates, and quantity summaries to international standards."
     ],
-    link: "/programs",
+    link: "/programs/courses/4",
   }
 ];
 

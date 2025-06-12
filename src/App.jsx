@@ -15,6 +15,8 @@ import Contact from './pages/Contact';
 import LoginPortal from './pages/LoginPortal';
 import ProgramDetails from './components/ProgramCom/ProgramDetails'; // NEW
 import ScrollToTop from './ScrollToTop';
+import ProgramDetailsWrapper from './components/ProgramCom/ProgramDetailsWrapper';
+
 
 const App = () => {
   return (
@@ -26,7 +28,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/programs" element={<Programs />} />
-          <Route path="/programs/:category/:id" element={<ProgramDetails />} />
+          <Route path="/programs/:category/:id" element={<ProgramDetailsWrapper/>} />
           <Route path="/services" element={<Services />} />
           <Route path="/hiring-solutions" element={<Recruitors />} />
           <Route path="/login" element={<LoginPortal />} />
