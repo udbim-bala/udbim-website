@@ -18,6 +18,7 @@ import '../RecruitCom/RecruitPricing.css';
 const RecruitPricing = () => {
   const [activeTab, setActiveTab] = useState('employers');
   const WHATSAPP_NUMBER = '918122149339';
+  const CONTACT_EMAIL = 'talent@ud-bimtraining.com';
 
   const whatsappLinks = {
     requestCandidates: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -209,7 +210,13 @@ const RecruitPricing = () => {
 
         <div className="pricing-cta">
           <h3>Ready to Build Your Ideal Team or Advance Your Career?</h3>
-          <p>Connect with our specialized recruitment consultants today</p>
+          <p>Share your requirements & Connect with our specialized recruitment consultants today</p>
+          <div className="contact-options">
+            <div className="contact-method">
+              <span>Email: </span>
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            </div>
+          </div>
           <div className="cta-buttons">
             <a
               href={whatsappLinks.hireTalent}

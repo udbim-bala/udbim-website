@@ -1,5 +1,14 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { 
+  FaEnvelope, 
+  FaPhone, 
+  FaMapMarkerAlt, 
+  FaFacebook, 
+  FaInstagram, 
+  FaLinkedin,
+  FaPaperPlane
+} from 'react-icons/fa';
 import '../ContactCom/ConCom.css';
 
 const ConCom = () => {
@@ -37,8 +46,6 @@ const ConCom = () => {
       setIsSubmitting(false);
       setSubmitStatus('error');
     });
-
-    console.log("Sending email with data:", formData);
   };
 
   return (
@@ -57,19 +64,19 @@ const ConCom = () => {
             </p>
 
             <InfoItem
-              icon="mail"
+              icon={<FaEnvelope />}
               title="Email Us"
               details={["contact@ud-bimtraining.com"]}
             />
 
             <InfoItem
-              icon="phone"
+              icon={<FaPhone />}
               title="Call Us"
               details={["+91 81221 49339"]}
             />
 
             <InfoItem
-              icon="location"
+              icon={<FaMapMarkerAlt />}
               title="Visit Us"
               details={[
                 "73, 2nd Floor, South Sivan Koil St,",
@@ -80,12 +87,15 @@ const ConCom = () => {
             />
 
             <div className="social-links">
-              {['Facebook', 'Instagram', 'LinkedIn'].map((label, i) => (
-                <a key={i} href="#" aria-label={label}>
-                  {/* Replace this with real icons or imported ones */}
-                  <span className="social-icon">{label[0]}</span>
-                </a>
-              ))}
+              <a href="#" aria-label="Facebook">
+                <FaFacebook />
+              </a>
+              <a href="#" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <FaLinkedin />
+              </a>
             </div>
           </aside>
 
@@ -143,9 +153,7 @@ const ConCom = () => {
                 {isSubmitting ? 'Sending...' : (
                   <>
                     Send Message
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style={{ marginLeft: '8px' }} fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                    </svg>
+                    <FaPaperPlane style={{ marginLeft: '8px' }} />
                   </>
                 )}
               </button>
@@ -170,21 +178,19 @@ const ConCom = () => {
   );
 };
 
-// Reusable InfoItem Component
+// Reusable Components
 const InfoItem = ({ icon, title, details }) => (
   <div className="info-item">
     <div className="info-icon">
-      {/* Replace this SVG with actual icons depending on `icon` prop */}
-      <span className="icon-placeholder">{icon}</span>
+      {icon}
     </div>
-    <div>
+    <div className="info-content">
       <h4>{title}</h4>
       {details.map((line, i) => <p key={i}>{line}</p>)}
     </div>
   </div>
 );
 
-// Reusable InputField Component
 const InputField = ({ id, label, type, value, onChange }) => (
   <div className="input-group">
     <label htmlFor={id}>{label}</label>
@@ -200,10 +206,13 @@ const InputField = ({ id, label, type, value, onChange }) => (
   </div>
 );
 
-// Reusable Alert Component
 const Alert = ({ type, message }) => (
   <div className={`alert ${type}`}>
-    {type === 'success' && (
+    {type === 'success' ? (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+        <path fillRule="evenodd" clipRule="evenodd" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 14l-4-4 1.414-1.414L11 13.172l5.293-5.293 1.414 1.414L11 16z" />
+      </svg>
+    ) : (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
         <path fillRule="evenodd" clipRule="evenodd" d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 14l-4-4 1.414-1.414L11 13.172l5.293-5.293 1.414 1.414L11 16z" />
       </svg>

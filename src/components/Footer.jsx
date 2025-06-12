@@ -77,10 +77,6 @@ const Footer = () => {
                   <span className="contact-icon me-2 mt-1"><FaEnvelope /></span>
                   <a href="mailto:contact@ud-bimtraining.com" className="footer-link contact-link">contact@ud-bimtraining.com</a>
                 </li>
-                <li className="d-flex mb-2 align-items-start">
-                  <span className="contact-icon me-2 mt-1"><FaGlobe /></span>
-                  <a href="https://www.ud-bimtraining.com" target="_blank" rel="noreferrer" className="footer-link contact-link">www.ud-bimtraining.com</a>
-                </li>
                 <li className="d-flex align-items-start">
                   <span className="contact-icon me-2 mt-1"><FaMapMarkerAlt /></span>
                   <address className="footer-address">

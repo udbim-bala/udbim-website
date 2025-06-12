@@ -26,7 +26,7 @@
   font-size: 1.125rem;
   color: #272361;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
 }
 
 /* Pricing Tabs */
@@ -220,6 +220,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: auto;
+  text-align: center;
+  text-decoration: none;
 }
 
 .plan-button:hover {
@@ -237,7 +239,7 @@
   border-image: linear-gradient(90deg, #4655a5, #0dbcd4) 1 !important;
   border-top: none;
   border-radius: 0;
-  padding: 1.5rem;
+  padding: 4rem 1.5rem 1.5rem 1.5rem;
   background: white;
   transition: all 0.3s ease !important;
   box-shadow: none;
@@ -298,6 +300,8 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
 }
 
 .service-button:hover {
@@ -329,14 +333,36 @@
   margin-right: auto;
 }
 
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.contact-method {
+  font-size: 1.125rem;
+  color: #272361;
+}
+
+.contact-method a {
+  color: #4655a5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+  color: #0dbcd4;
+  text-decoration: underline;
+}
+
 .cta-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-}
-.cta-button:hover{
-  box-shadow: none;
 }
 
 .cta-button {
@@ -346,6 +372,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
+  text-decoration: none;
 }
 
 .cta-button.primary {
@@ -384,6 +411,11 @@
     font-size: 1rem;
   }
 
+  .header-contact,
+  .contact-method {
+    font-size: 1rem;
+  }
+
   .plan-price {
     font-size: 1.25rem;
   }
@@ -418,5 +450,10 @@
 
   .tab-content {
     padding: 1rem;
+  }
+
+  .contact-options {
+    align-items: flex-start;
+    margin-left: 1rem;
   }
 }

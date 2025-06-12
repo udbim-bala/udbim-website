@@ -1,12 +1,13 @@
 :root {
   --primary-color: #272361;
+  --secondary-color: #0dbcd4;
   --gradient-bg: linear-gradient(135deg, #4655a5, #0dbcd4);
   --light-color: #f8f9fa;
   --dark-color: #272361;
   --gray-color: #6c757d;
   --light-gray: #e9ecef;
-  --success-color: #0dbcd4;
-  --error-color: #f72585;
+  --success-color: #28a745;
+  --error-color: #dc3545;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
 }
@@ -88,7 +89,7 @@ body {
   left: 0;
   width: 50px;
   height: 3px;
-  background: var(--gradient-bg);
+  background: white;
 }
 
 .info-description {
@@ -99,34 +100,24 @@ body {
 .info-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .info-icon {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
 }
 
-.info-icon svg {
-  width: 20px;
-  height: 20px;
-}
-
-.info-item h4 {
+.info-content h4 {
   font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.info-item p {
+.info-content p {
   opacity: 0.9;
   font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .social-links {
@@ -145,16 +136,12 @@ body {
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  font-size: 1.2rem;
 }
 
 .social-links a:hover {
-  background: var(--gradient-bg);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
-}
-
-.social-links svg {
-  width: 20px;
-  height: 20px;
 }
 
 .contact-form h3 {
@@ -191,9 +178,15 @@ body {
 }
 
 .alert.success {
-  background-color: rgba(13, 188, 212, 0.1);
+  background-color: rgba(40, 167, 69, 0.1);
   color: var(--success-color);
-  border: 1px solid rgba(13, 188, 212, 0.3);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.alert.error {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--error-color);
+  border: 1px solid rgba(220, 53, 69, 0.3);
 }
 
 .form-row {
@@ -259,12 +252,7 @@ body {
 
 .send-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  filter: brightness(1.1);
-}
-
-.send-btn svg {
-  width: 20px;
-  height: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .send-btn:disabled {
@@ -312,10 +300,5 @@ body {
 
   .contact-info h3, .contact-form h3 {
     font-size: 1.5rem;
-  }
-
-  .info-item {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
