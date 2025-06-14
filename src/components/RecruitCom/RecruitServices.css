@@ -9,14 +9,13 @@
 
 .services-hero {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2.5rem;
   margin-bottom: 3.75rem;
   padding: 2.5rem;
   border-radius: 10px;
-  /* background: linear-gradient(135deg, #4655a5, #0dbcd4); */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
 }
 
 .hero-content {
@@ -24,16 +23,20 @@
   min-width: 300px;
 }
 
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+  color: #272361;
+}
+
 .hero-content h1 {
   font-size: 2.5rem;
-  color: #272361;
   margin-bottom: 0.9rem;
   font-weight: 700;
 }
 
 .hero-content h2 {
   font-size: 1.8rem;
-  color: #272361;
   margin-bottom: 1.25rem;
   font-weight: 600;
 }
@@ -41,7 +44,6 @@
 .hero-content p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: #272361;
 }
 
 .highlight-service {
@@ -53,16 +55,19 @@
   max-width: 400px;
 }
 
-.highlight-service h3 {
+.highlight-service h3,
+.highlight-service p {
   color: #272361;
-  margin-bottom: 0.625rem;
+}
+
+.highlight-service h3 {
   font-size: 1.3rem;
+  margin-bottom: 0.625rem;
 }
 
 .highlight-service p {
-  margin-bottom: 0;
   font-size: 1rem;
-  color: #272361;
+  margin-bottom: 0;
 }
 
 .hero-image {
@@ -236,34 +241,28 @@
   color: #272361;
 }
 
-@media (max-width: 900px) {
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .recruitment-services {
+    padding: 2rem 1rem;
+  }
+
   .services-hero {
     flex-direction: column;
-    padding: 2rem 1rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .hero-content,
   .hero-image {
     flex: 1 1 100%;
+    min-width: 100%;
     max-width: 100%;
   }
 
   .hero-image {
-    max-height: 280px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  .expertise-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .services-hero {
-    padding: 1.5rem 1rem;
+    max-height: 300px;
   }
 
   .hero-content h1 {
@@ -271,11 +270,48 @@
   }
 
   .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlight-service {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .recruitment-services {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .services-hero {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h2 {
     font-size: 1.3rem;
   }
 
-  .hero-content p {
-    font-size: 0.9rem;
+  .hero-content p,
+  .highlight-service p {
+    font-size: 1rem;
+  }
+
+  .highlight-service {
+    padding: 1rem;
   }
 
   .highlight-service h3 {
@@ -288,23 +324,64 @@
 
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .expertise-grid {
-    grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
+    padding: 0;
   }
 
   .service-card {
-    padding: 1.25rem 1rem;
+    padding: 1.5rem 1.25rem;
   }
 
   .service-card h3 {
     font-size: 1.2rem;
   }
 
+  .expertise-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .expertise-card {
+    padding: 1rem 0.75rem;
+  }
+
   .expertise-card h4 {
     font-size: 1rem;
+  }
+
+  .expertise-card .tools {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-icon,
+  .expertise-icon {
+    transform: scale(0.9);
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
   }
 }
