@@ -7,14 +7,10 @@ import './ProgramCom.css';
 const ProgramCom = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0].id);
   const [selectedProgram, setSelectedProgram] = useState(null);
-  const [showAll, setShowAll] = useState(false);
 
   const filteredPrograms = programs.filter(
     program => program.category === selectedCategory
   );
-  const displayedPrograms = showAll
-    ? filteredPrograms
-    : filteredPrograms.slice(0, 4);
 
   return (
     <div className="programs-page">
@@ -29,7 +25,6 @@ const ProgramCom = () => {
             onClick={() => {
               setSelectedCategory(category.id);
               setSelectedProgram(null);
-              setShowAll(false);
             }}
           >
             {category.name}
@@ -44,26 +39,15 @@ const ProgramCom = () => {
           onBack={() => setSelectedProgram(null)}
         />
       ) : (
-        <>
-          <div className="programs-grid">
-            {displayedPrograms.map(program => (
-              <ProgramCard
-                key={program.id}
-                program={program}
-                onClick={() => setSelectedProgram(program)}
-              />
-            ))}
-          </div>
-
-          {filteredPrograms.length > 4 && (
-            <button
-              className="view-more-button"
-              onClick={() => setShowAll(!showAll)}
-            >
-              {showAll ? 'Show Less' : 'View More Programs'}
-            </button>
-          )}
-        </>
+        <div className="programs-grid">
+          {filteredPrograms.map(program => (
+            <ProgramCard
+              key={program.id}
+              program={program}
+              onClick={() => setSelectedProgram(program)}
+            />
+          ))}
+        </div>
       )}
     </div>
   );

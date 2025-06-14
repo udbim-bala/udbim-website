@@ -164,7 +164,7 @@ const ConCom = () => {
         <div className="map-container">
           <iframe
             title="Google Maps Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.5057276243356!2d80.21085479999999!3d13.04697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266e814288e41%3A0x378986be92e74870!2sLearn%20Bench%20India-%20Best%20project%20Center%20in%20chennai!5e1!3m2!1sen!2sin!4v1748330727010!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.505612568075!2d80.2108769!3d13.046977700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526712cb66da37%3A0xbbdc7fa77a9bc9be!2sUniversal%20Detailing%20and%20BIM%20Training%20Institute!5e1!3m2!1sen!2sin!4v1749882854072!5m2!1sen!2sin"
             width="600"
             height="450"
             style={{ border: 0 }}
@@ -222,3 +222,7 @@ const Alert = ({ type, message }) => (
 );
 
 export default ConCom;
+
+
+
+

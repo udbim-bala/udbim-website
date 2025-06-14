@@ -7,7 +7,15 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  
+  // Function to close menu when a link is clicked
+  const closeMenu = () => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+  };
 
   return (
     <nav className='navbarItems'>
@@ -21,16 +29,16 @@ const Navbar = () => {
 
       <div className='navbar-menu-box'>
         <ul className={menuOpen ? 'navbar-links active' : 'navbar-links'}>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/aboutUs'>About Us</Link></li>
-          <li><Link to='/programs'>Programs</Link></li>
-          <li><Link to='/services'>Services</Link></li>
-          <li><Link to='/hiring-solutions'>Hiring Solutions</Link></li>
+          <li><Link to='/' onClick={closeMenu}>Home</Link></li>
+          <li><Link to='/aboutUs' onClick={closeMenu}>About Us</Link></li>
+          <li><Link to='/programs' onClick={closeMenu}>Programs</Link></li>
+          <li><Link to='/services' onClick={closeMenu}>Services</Link></li>
+          <li><Link to='/hiring-solutions' onClick={closeMenu}>Hiring Solutions</Link></li>
           <li className='navbar-buttons-mobile'>
-            <Link to='/login'>
+            <Link to='/login' onClick={closeMenu}>
               <Button variant='outline-primary' className='w-100 my-2'>Login Portal</Button>
             </Link>
-            <Link to='/contact'>
+            <Link to='/contact' onClick={closeMenu}>
               <Button variant='outline-primary' className='w-100'>Contact</Button>
             </Link>
           </li>

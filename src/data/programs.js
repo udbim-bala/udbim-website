@@ -3,12 +3,14 @@ import TwoD from '../assets/Images/Course1.jpg';
 import ThreeD from '../assets/Images/Course2.jpg';
 import Structural_Detailing from '../assets/Images/Course3.jpg';
 import Estimation from '../assets/Images/Course4.png';
+import Tekla from '../assets/Images/Course5.webp'
 import CS1 from '../assets/Images/CS1.jpg';
 import CS2 from '../assets/Images/CS2.jpg';
 import CS3 from '../assets/Images/CS3.JPG';
 import CS4 from '../assets/Images/CS4.jpg';
 import CS5 from '../assets/Images/CS5.jpg';
 import CS6 from '../assets/Images/CS6.jpg';
+
 import PK1 from '../assets/Images/package1.avif';
 import PK2 from '../assets/Images/package2.avif';
 
@@ -281,6 +283,46 @@ export const programs = [
     ],
     link: "https://wa.me/918122149339?text=I'm%20interested%20in%20Steel%20SDS2%20Training",
   },
+
+  {
+  id: 13,
+  title: "3D Rebar Detailing – BIM (Using Tekla)",
+  category: "courses",
+  image: Tekla, // Replace with actual image import or variable
+  shortDesc:
+    "Become proficient in 3D rebar detailing with Tekla Structures, designed for professionals transitioning from 2D to advanced BIM workflows.",
+  longDesc:
+    "The 3D Rebar Detailing – BIM (Using Tekla) course equips you with practical and industry-relevant skills in structural reinforcement modeling using Tekla Structures. Tailored for those with prior 2D rebar experience, this course bridges the gap to 3D by incorporating intelligent modeling, automated scheduling, clash coordination, and precast workflows in a BIM ecosystem. Gain hands-on knowledge through real-world project simulations and prepare for global construction opportunities.",
+  price: "₹22,000 + 18% GST (Total: ₹25,960)",
+  duration: "50 Hours (Approx.)",
+  batchOptions: ["Weekends Only"],
+  trainingMode: ["Live Online", "Offline (Classroom)"],
+  softwareUsed: ["Tekla Structures"],
+  eligibility:
+    "Only for individuals with prior 2D rebar detailing experience. Familiarity with structural drawings and basic BIM concepts is expected.",
+  careerPaths: [
+    "Tekla BIM Rebar Modeler (Infrastructure & EPC Projects)",
+    "BIM Technician – Structural Detailing",
+    "Rebar Detailer – Precast and Cast-in-situ Projects",
+    "Structural BIM Engineer (Global Projects)",
+    "BIM Coordinator – Rebar Modeling",
+    "Steel and Concrete Detailing Specialist"
+  ],
+  CourseModules: [
+    "Fundamentals of Tekla Structures",
+    "3D Rebar Modeling Techniques",
+    "Concrete Member Modeling (Beams, Columns, Slabs)",
+    "Reinforcement Tools and Customization",
+    "Shop Drawings and BBS Creation",
+    "Clash Detection and Coordination Methods",
+    "Precast Detailing using Tekla",
+    "Model Review and Revisions",
+    "Exporting IFC and Project Deliverables",
+    "Live Industry Project – Hands-On Practice"
+  ],
+  link: "https://forms.gle/pM8kmnrQUxqEXtHN7"
+},
+
   {
     id: 5,
     title: "Detailing Office Package",
