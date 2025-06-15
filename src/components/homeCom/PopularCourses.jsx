@@ -48,7 +48,7 @@ const coursesData = [
 
 const PopularCourses = () => {
   return (
-    <section className="popular-courses">
+    <section className="popular-courses" id='popular-courses'>
       <Container>
         <Row className="justify-content-center text-center mb-5">
           <Col lg={8}>

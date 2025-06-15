@@ -92,7 +92,7 @@ export const programs = [
     longDesc:
       "The 3D Structural Detailing – BIM course offers in-depth training in structural modeling, detailing, and documentation using Tekla Structures, a leading BIM software for steel and concrete structures.",
     price: "₹30,000 + 18% GST (Total: ₹35,400)",
-    duration: "75 Hours (Approx.)",
+    duration: "120 Hours (Approx.)",
     batchOptions: ["Weekends Only"],
     trainingMode: ["Live Online", "Offline (Classroom)"],
     softwareUsed: ["Tekla Structures"],

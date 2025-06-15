@@ -10,7 +10,7 @@ import HeroImg from '../../assets/Images/Hero.png';
 
 const HeroSection = () => {
   const scrollToSection = () => {
-    const section = document.getElementById('home-2nd');
+    const section = document.getElementById('popular-courses');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
@@ -39,7 +39,7 @@ const HeroSection = () => {
       </div>
 
       {/* Academy Section */}
-      <Container fluid className="px-5 py-2 academy-section section-wrapper" id="home-2nd">
+      <Container fluid className="px-5 py-2 academy-section section-wrapper">
         <Row className="align-items-center">
           <Col md={5}>
             <div className="image-grid">

@@ -59,7 +59,7 @@ const Footer = () => {
               <div className="footer-brand">
                 <img src={Logo} alt="UD-BIM Logo" className="footer-logo" />
                 <p className="footer-about-text">
-                  At UD-BIM Training Institute, we empower professionals with cutting-edge skills in Rebar Detailing, BIM, and Structural Detailing through hands-on, industry-relevant training programs.
+                  At UD-BIM Training Institute, we empower professionals with cutting-edge skills in Rebar Detailing, BIM, and Structural Detailing through hands-on, industry-relevant training programs and talent resourcing to detailing and BIM industry.
                 </p>
                 <div className="trust-badges">
                   <span className="trust-badge">Industry Certified</span>
