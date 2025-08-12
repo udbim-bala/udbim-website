@@ -17,6 +17,10 @@ import ProgramDetails from './components/ProgramCom/ProgramDetails'; // NEW
 import ScrollToTop from './ScrollToTop';
 import ProgramDetailsWrapper from './components/ProgramCom/ProgramDetailsWrapper';
 
+// certificate verification new
+import CertificateVerification from './pages/CertificateVerification'; // NEW
+
+
 
 const App = () => {
   return (
@@ -33,6 +37,7 @@ const App = () => {
           <Route path="/hiring-solutions" element={<Recruitors />} />
           <Route path="/login" element={<LoginPortal />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/verify-certificate" element={<CertificateVerification />} /> {/* ✅ New Route */}
         </Routes>
       </div>
       <Footer />
