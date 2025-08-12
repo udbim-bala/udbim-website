@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/certificateVerification.css";
+import "../css/CertificateVerification.css";
 import logoWhite from '../assets/Logo-White.png';
 import certificateData from '../data/certificate'; // ✅ Local data import
 
