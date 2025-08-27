@@ -19,6 +19,7 @@ import ProgramDetailsWrapper from './components/ProgramCom/ProgramDetailsWrapper
 
 // certificate verification new
 import CertificateVerification from './pages/CertificateVerification'; // NEW
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 
 
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/login" element={<LoginPortal />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/verify-certificate" element={<CertificateVerification />} /> {/* ✅ New Route */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
         </Routes>
       </div>
       <Footer />
